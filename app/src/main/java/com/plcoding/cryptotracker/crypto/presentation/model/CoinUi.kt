@@ -29,8 +29,8 @@ fun Coin.toCoinUi(): CoinUi {
         name = name,
         symbol = symbol,
         priceUsd = priceUsd.toDisplayableNumber(),
-        marketCapUsd = marketCapUsdL.toDisplayableNumber(),
-        changePercent24h = changePercent24h.toDisplayableNumber(),
+        marketCapUsd = marketCapUsd.toDisplayableNumber(),
+        changePercent24h = changePercent24Hr.toDisplayableNumber(),
         iconRes = getDrawableIdForCoin(symbol)
     )
 }
