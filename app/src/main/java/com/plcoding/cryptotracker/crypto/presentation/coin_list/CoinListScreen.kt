@@ -26,6 +26,7 @@ fun CoinListScreen(
     state: CoinListState,
     modifier: Modifier = Modifier
 ) {
+
     AnimatedContent(
         modifier = modifier,
         targetState = state.isLoading,

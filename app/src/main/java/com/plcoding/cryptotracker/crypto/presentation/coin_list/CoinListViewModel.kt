@@ -15,8 +15,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
 
 class CoinListViewModel(
     private val coinDataSource: CoinDataSource
@@ -99,7 +97,7 @@ class CoinListViewModel(
                 }
                 .onError { error ->
                     _state.update { it.copy(isLoading = false) }
-//                    _events.send(CoinListEvent.Error(error))
+                    _events.send(CoinListEvent.Error(error))
                 }
         }
     }
